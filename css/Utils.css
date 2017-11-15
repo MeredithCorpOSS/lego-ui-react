@@ -1,0 +1,26 @@
+.Utils-row {
+  display: flow-root;
+}
+
+.Utils-row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.Utils-capitalize {
+  text-transform: capitalize;
+}
+
+.Utils-uppercase {
+  text-transform: uppercase;
+}
+
+.Utils-column {
+  float: left;
+}
+
+.Utils-page {
+  background: var(--page-bg-color);
+  padding: 20px 40px;
+}

@@ -1,0 +1,57 @@
+.Table {
+  border-spacing: 0;
+  border-collapse: colapse;
+  padding-bottom: 10px;
+}
+
+.Table.Table-stretch {
+  width: 100%;
+}
+
+.Table th {
+  text-align: left;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.Table td {
+  font-size: 1.2rem;
+}
+
+.Table th span {
+  display: block;
+  padding-bottom: 10px;
+  width: 120px;
+  border-bottom: 2px solid #aaa;
+}
+
+.Table td,
+.Table th {
+  padding: 20px 10px;
+  border: 1px solid transparent;
+}
+
+.Table td.highlight,
+.Table td.active {
+  background: var(--table-highlight-color);
+}
+
+.Table td.highlight,
+.Table th.highlight {
+  padding: 0;
+  width: 10px;
+}
+
+/* state  */
+.Table tbody tr:hover td {
+  border-top-color: var(--table-hover-border-color);
+  border-bottom-color: var(--table-hover-border-color);
+}
+
+.Table tbody tr:hover td:first-child {
+  border-left-color: var(--table-hover-border-color);
+}
+
+.Table tbody tr:hover td:last-child {
+  border-right-color: var(--table-hover-border-color);
+}

@@ -1,0 +1,30 @@
+{
+  "name": "lego-ui-react",
+  "version": "0.1.0",
+  "description": "React bindings for UI for dashbaord",
+  "license": "MIT",
+  "repository": "https://github.com/TimeIncOSS/lego-ui",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.8.1",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0"
+  },
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint"
+    ],
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ],
+    "*.css": "stylelint"
+  },
+  "dependencies": {
+    "lego-ui": "git+https://github.com/awebdeveloper/lego-ui.git"
+  }
+}
