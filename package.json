@@ -4,13 +4,31 @@
   "description": "React bindings for UI for dashbaord",
   "license": "MIT",
   "repository": "https://github.com/TimeIncOSS/lego-ui-react",
-  "main":"index.js",
+  "main": "dist/main.js",
   "devDependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^4.3.0",
     "prettier": "^1.8.1",
     "stylelint": "^8.2.0",
-    "stylelint-config-standard": "^17.0.0"
+    "stylelint-config-standard": "^17.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-react": "^6.24.1",
+    "postcss-loader": "2.0.8",
+    "css-loader": "0.28.7",
+    "autoprefixer": "7.1.6",
+    "style-loader": "0.19.0",
+    "webpack": "^3.8.1",
+    "babel-preset-react-app": "^3.1.0",
+    "browserslist": "^2.9.1",
+    "classnames": "^2.2.5",
+    "escape-string-regexp": "^1.0.5",
+    "prop-types": "^15.6.0"
   },
   "scripts": {
     "precommit": "lint-staged"
@@ -26,6 +44,5 @@
     "*.css": "stylelint"
   },
   "dependencies": {
-    "lego-ui": "git+https://github.com/awebdeveloper/lego-ui.git"
   }
 }
