@@ -1,8 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { MagnifyingGlass } from "../SvgIcons/SvgIcons";
 
-import './input.css';
+import './Input.css';
+
+const iconSizes = {
+  small : 'tiny',
+  regular : 'small',
+  large : 'regular',
+}
 
 class Input extends React.Component {
   constructor() {
@@ -49,15 +56,25 @@ class Input extends React.Component {
     }, props.inputWaitTime);
   };
 
-  render() {
-    const { props } = this;
-    const className = classnames(
+  getCssClasses(props) {
+    let classNames = classnames(
       'Input',
       `Input-${props.look}`,
       `Input-${props.size}`,
-      `Theme-${props.theme}`
+      `Theme-${props.theme}`,
+      props.classes
     );
 
+    if (props.styles) {
+      classNames = props.styles.reduce(function(prevValue, currentValue, key) {
+        return prevValue + ` Input-${currentValue}`;
+      }, classNames);
+    }
+
+    return classNames;
+  }
+
+  renderInput(props) {
     return (
       <input
         type={props.type}
@@ -70,9 +87,27 @@ class Input extends React.Component {
         name={props.name}
         maxLength={props.maxLength}
         minLength={props.minLength}
-        className={className}
       />
     );
+  }
+
+  render() {
+
+    const { props } = this;
+    const classNames = this.getCssClasses(props);
+
+
+    let icon = props.icon;
+    if(props.type === 'search' && !icon) {
+      icon = <MagnifyingGlass size={iconSizes[props.size]} viewBox="0 -3 24 24"/>
+    }
+
+    return (
+      <div className={classNames}>
+        <span className="InputIcon">{icon}</span>
+        { this.renderInput(props) }
+      </div>
+    )
   }
 }
 

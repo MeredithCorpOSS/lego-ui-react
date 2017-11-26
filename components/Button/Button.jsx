@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import '../../css/Button.css';
+import './Button.css';
 
 class Button extends React.Component {
   static propTypes = {
@@ -19,7 +19,8 @@ class Button extends React.Component {
     size: PropTypes.oneOf(['regular', 'large', 'small']),
     styles: PropTypes.arrayOf(PropTypes.string),
     active: PropTypes.bool,
-    highlight: PropTypes.bool
+    highlight: PropTypes.bool,
+    classes: PropTypes.string
   };
 
   static defaultProps = {
@@ -37,7 +38,8 @@ class Button extends React.Component {
       `Button-${props.look}`,
       `Button-${props.size}`,
       { 'Button-active': props.active },
-      { 'Button-highlight': props.highlight }
+      { 'Button-highlight': props.highlight },
+      props.classes
     );
 
     if (props.styles) {
@@ -45,6 +47,7 @@ class Button extends React.Component {
         return prevValue + ` Button-${currentValue}`;
       }, classNames);
     }
+
     return classNames;
   }
 

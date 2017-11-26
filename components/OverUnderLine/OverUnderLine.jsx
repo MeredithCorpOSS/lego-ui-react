@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../css/OverUnderLine.css';
+import './OverUnderLine.css';
 
 class OverUnderLine extends React.Component {
   static propTypes = {

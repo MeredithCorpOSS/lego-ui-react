@@ -1,0 +1,84 @@
+.Dropdown,
+.Dropup {
+  position: relative;
+}
+
+.Dropdown-toggle:after,
+.Dropup-toogle:after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  vertical-align: 0.5em;
+  font-size: 12px;
+}
+
+.Dropdown-toggle:after {
+  content: '\25BC';
+}
+
+.Dropdown-menu {
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+  display: none;
+  float: left;
+  min-width: 200px;
+  margin: 2px 0 0;
+  text-align: left;
+  list-style: none;
+  background-color: var(--dropdown-bg-color);
+  background-clip: padding-box;
+  border: 1px solid var(--dropdown-border-color);
+  color: var(--dropdown-text-color);
+}
+
+/* styles */
+.Dropdown-attached {
+  margin: 0;
+}
+
+.Dropdown-left {
+  left: 0;
+}
+
+.Dropdown-right {
+  right: 0;
+}
+
+/* states */
+.Dropdown-open {
+  display: block;
+}
+
+/** Dropdown Item **/
+.Dropdown-item {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  clear: both;
+  color: var(--dropdown-link-color);
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+/* states */
+.Dropdown-item:hover {
+  color: var(--dropdown-link-hover-color);
+  text-decoration: none;
+}
+
+.Dropdown-item.active,
+.Dropdown-item:active {
+  color: var(--dropdown-link-active-color);
+  text-decoration: none;
+}
+
+.Dropdown-item.disabled,
+.Dropdown-item:disabled {
+  color: var(--dropdown-link-disabled-color);
+  background-color: transparent;
+}

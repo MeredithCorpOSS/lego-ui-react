@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Pagination.css';
 
-import LinkButton from '../LinkButton/LinkButton';
+import LinkButton from '../Button/LinkButton';
 
 class Pagination extends React.Component {
   static propTypes = {

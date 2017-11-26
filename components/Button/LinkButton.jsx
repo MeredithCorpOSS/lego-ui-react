@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import '../../css/Button.css';
+import './Button.css';
 
 class LinkButton extends React.Component {
   static propTypes = {
