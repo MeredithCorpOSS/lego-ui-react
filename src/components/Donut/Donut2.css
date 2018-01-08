@@ -1,0 +1,33 @@
+.Donut2 {
+  position: relative;
+}
+
+.Donut2:after {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: 35px;
+  left: 35px;
+  background: black;
+  border-radius: 150%;
+}
+
+.Donut2 circle {
+  fill: #ddd;
+  stroke: var(--warning-bg-color);
+  stroke-width: 105;
+  stroke-dasharray: 0 0;
+  transition: stroke-dasharray 0.3s ease;
+}
+
+.Donut2 svg {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  transform: rotate(-90deg);
+  background: var(--success-bg-color);
+  border-radius: 50%;
+  display: block;
+  float: left;
+}

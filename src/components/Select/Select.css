@@ -1,0 +1,63 @@
+.Select {
+  color: var(--input-text-color);
+  background: var(--input-bg-color);
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.Select:after {
+  width: 0;
+  height: 0;
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid;
+  border-top-color: var(--input-text-color);
+}
+
+.Select-dropdown {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  padding: 0.1rem 0.7rem;
+  line-height: 1.5;
+  color: var(--input-text-color);
+  background: var(--input-bg-color);
+  border: none;
+  padding-right: 25px;
+  outline: none;
+}
+
+/* size */
+.Select-large > .Select-dropdown {
+  font-size: 1.3rem;
+  height: 2.5rem;
+}
+
+.Select-regular > .Select-dropdown {
+  font-size: 1rem;
+  height: 1.8rem;
+}
+
+.Select-small > .Select-dropdown {
+  font-size: 0.8rem;
+  height: 1.5rem;
+}
+
+/* look */
+.Select-rounded {
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+/* state */
+.Input:focus-within {
+  box-shadow: var(--outline-style);
+}

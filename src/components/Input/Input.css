@@ -1,0 +1,73 @@
+.Input {
+  display: flex;
+  border: 1px solid;
+  border-color: var(--input-border-color);
+  font-family: var(--font-family);
+}
+
+.Input > input,
+.InputIcon:not(:empty) {
+  padding: 0.25rem 0.5rem;
+  line-height: 1.5;
+  color: var(--input-text-color);
+  background: var(--input-bg-color);
+  border: 0;
+}
+
+.Input > input {
+  width: 100%;
+  outline: none;
+  margin: 0;
+}
+
+.Input > input[type = 'search'] {
+  -webkit-appearance: textfield;
+}
+
+.Input > input[type = 'search']::-webkit-search-cancel-button {
+  /* Remove default */
+  -webkit-appearance: none;
+
+  /* Now your own custom styles */
+  height: 5px;
+  width: 10px;
+  background: red;
+  cursor: pointer;
+}
+
+.Input > input::-webkit-input-placeholder {
+  color: var(--input-placeholder-color);
+}
+
+.Input > input::-moz-placeholder {
+  color: var(--placeholder-color);
+}
+
+/* size */
+.Input-regular {
+  font-size: 1rem;
+}
+
+.Input-small {
+  font-size: 0.8em;
+}
+
+.Input-large {
+  font-size: 1.5em;
+}
+
+/* look */
+.Input-rounded {
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+/* state */
+.Input:focus-within {
+  box-shadow: var(--outline-style);
+}
+
+.Input > .input:focus {
+  outline: 0;
+  box-shadow: none;
+}

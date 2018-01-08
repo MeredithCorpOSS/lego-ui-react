@@ -1,0 +1,41 @@
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Look */
+.Grid-space-between {
+  justify-content: space-between;
+}
+
+.Grid-space-around {
+  justify-content: space-around;
+}
+
+/* size */
+.Grid-large.Grid-large {
+  margin-left: -40px;
+}
+
+.Grid-large > .Grid-Item {
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+
+.Grid-normal.Grid-regular {
+  margin-left: -30px;
+}
+
+.Grid-regular > .Grid-Item {
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.Grid-normal.Grid-small {
+  margin-left: -20px;
+}
+
+.Grid-small > .Grid-Item {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}

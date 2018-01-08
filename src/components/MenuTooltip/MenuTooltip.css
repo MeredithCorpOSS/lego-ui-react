@@ -1,0 +1,12 @@
+.MenuTooltip-item {
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: var(--tooltip-text-color);
+}
+
+.MenuTooltip-item + .MenuTooltip-item {
+  border-top: 1px solid var(--tooltip-text-color);
+}

@@ -1,0 +1,151 @@
+.Tabs {
+  position: relative;
+  cursor: pointer;
+  line-height: 2rem;
+}
+
+.Tabs-list-tabs {
+  display: flex;
+}
+
+.TabItem {
+  color: var(--tabitem-text-color);
+}
+
+/* tab content */
+.Tab-content {
+  padding: 10px;
+}
+
+.Tabs-horizontal .Tab-content {
+  clear: both;
+  display: flow-root;
+}
+
+/* size */
+.Tabs-regular .TabItem {
+  padding: 10px 30px;
+  font-size: 1.125rem;
+}
+
+.Tabs-large .TabItem {
+  padding: 15px 40px;
+  font-size: 1.5rem;
+}
+
+.Tabs-small .TabItem {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+/* align */
+.Tabs-start .Tabs-list-tabs {
+  justify-content: flex-start;
+}
+
+.Tabs-end .Tabs-list-tabs {
+  justify-content: flex-end;
+}
+
+/* bordered */
+.Tabs-bordered .TabItem {
+  border: 1px solid var(--tabitem-border-color);
+}
+
+.Tabs-bordered .Tab-content {
+  border-color: var(--tabitem-border-color);
+}
+
+.Tabs-bordered.Tabs-horizontal.Tabs-before .Tab-content {
+  border-top: 1px solid;
+}
+
+.Tabs-bodered.Tabs-horizontal.Tabs-after .Tab-content {
+  border-bottom: 1px solid;
+}
+
+.Tabs-bodred.Tabs-vertical.Tabs-before .Tab-content {
+  border-left: 1px solid;
+}
+
+.Tabs-bodered.Tabs-vertical.Tabs-after .Tab-content {
+  border-right: 1px solid;
+}
+
+/* direction */
+
+.Tabs-vertical .TabItem {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.Tabs-horizontal .TabItem + .TabItem {
+  border-left: 0;
+}
+
+.Tabs-horizontal .Tabs-list {
+  clear: both;
+  display: flex;
+}
+
+.Tabs-vertical {
+  display: flex;
+}
+
+.Tabs-vertical .Tabs-list {
+  max-width: 30%;
+}
+
+.Tabs-vertical .Tabs-list-tabs {
+  flex-direction: column;
+}
+
+.Tabs-vertical .TabItem + .TabItem {
+  border-top: 0;
+}
+
+/* Selected */
+.TabItem-selected {
+  color: var(--tabitem-text-highlight-color);
+  border-color: var(--tabitem-highlight-color);
+}
+
+.Tabs-horizontal.Tabs-before .TabItem-selected {
+  border-bottom: 2px solid;
+}
+
+.Tabs-horizontal.Tabs-after .TabItem-selected {
+  border-top: 2px solid;
+}
+
+.Tabs-vertical.Tabs-before .TabItem-selected {
+  border-right: 2px solid;
+}
+
+.Tabs-vertical.Tabs-after .TabItem-selected {
+  border-left: 2px solid;
+}
+
+/* attach */
+.Tabs-horizontal.Tabs-before .TabItem {
+  padding-bottom: 5px;
+  margin-bottom: -2px;
+}
+
+.Tabs-horizontal.Tabs-after .TabItem {
+  padding-top: 5px;
+  margin-top: -1px;
+}
+
+.Tabs-vertical.Tabs-before .TabItem {
+  padding-left: 0;
+  padding-right: 10px;
+  margin-right: -2px;
+  text-align: right;
+}
+
+.Tabs-vertical.Tabs-after .TabItem {
+  padding-right: 0;
+  padding-left: 10px;
+  margin-left: -1px;
+}

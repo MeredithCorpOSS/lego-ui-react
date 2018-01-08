@@ -1,0 +1,6 @@
+.HighlightWrapper {
+  background-repeat: no-repeat;
+  background-position-x: right;
+  min-height: 80px;
+  background-color: var(--bg-color);
+}

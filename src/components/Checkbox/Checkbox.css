@@ -1,0 +1,96 @@
+.Checkbox {
+  border: 1px solid var(--input-border-color);
+  background: var(--input-bg-color);
+  display: block;
+  position: relative;
+}
+
+.Checkbox:hover {
+  background: var(--input-hover-color);
+}
+
+.Checkbox > input[type = 'checkbox'] {
+  background: var(--input-hover-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* look */
+.Checkbox-rounded {
+  border-radius: 4px;
+}
+
+/* state */
+.Checkbox-checked:before {
+  content: '\2713';
+  position: absolute;
+  top: -30%;
+  left: 2px;
+  color: var(--input-text-color);
+  line-height: 1;
+}
+
+.Checkbox-checked.Checkbox-partial:before {
+  content: '\2212';
+  font-weight: 900;
+}
+
+input[type = 'checkbox']:focus,
+.Checkbox:focus-within {
+  box-shadow: var(--outline-style);
+}
+
+.Checkbox-checked {
+  background: var(--input-hover-color);
+}
+
+/* size */
+.Checkbox-large {
+  width: 20px;
+  height: 20px;
+}
+
+.Checkbox-large > input[type = 'checkbox'] {
+  width: 18px;
+  height: 18px;
+}
+
+.Checkbox-large.Checkbox-checked:before {
+  font-size: 1.3rem;
+}
+
+.Checkbox-regular {
+  width: 15px;
+  height: 15px;
+}
+
+.Checkbox-regular > input[type = 'checkbox'] {
+  width: 12px;
+  height: 12px;
+}
+
+.Checkbox-regular.Checkbox-checked:before {
+  font-size: 1rem;
+}
+
+.Checkbox-small {
+  width: 12px;
+  height: 12px;
+}
+
+.Checkbox-small > input[type = 'checkbox'] {
+  width: 10px;
+  height: 10px;
+}
+
+.Checkbox-small.Checkbox-checked:before {
+  font-size: 1rem;
+  left: 0;
+}

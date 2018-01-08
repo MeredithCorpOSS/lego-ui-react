@@ -1,0 +1,7 @@
+.Loading {
+  background-image: url('../../images/spin.gif');
+  z-index: 5;
+  height: 100%;
+  background-repeat: no-repeat;
+  width: 190px;
+}
