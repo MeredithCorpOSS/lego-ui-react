@@ -4,7 +4,7 @@ module.exports = {
     path.join(__dirname, 'src/Base.css'),
     path.join(__dirname, 'src/Docs.css')
   ],
-  styleguideDir: "docs/styleguide",
+  styleguideDir: "docs/",
   showUsage: true,
   ignore:['**/*.types.{js,ts,,jsx,tsx}'],
   sections: [
